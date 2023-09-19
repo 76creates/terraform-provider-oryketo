@@ -53,7 +53,8 @@ output "should_allow_result" {
 * `subject_set_namespace` (optional) - Subject Set Namespace of the relationship tuple.
 * `subject_set_object` (optional) - Subject Set Object of the relationship tuple.
 * `subject_set_relation` (optional) - Subject Set Relation of the relationship tuple.
-  ~> NOTE: Either `subject_id` or `subject_set_*` group must be defined.
+
+~> NOTE: Either `subject_id` or `subject_set_*` group must be defined.
 
 ## Attributes Reference
 
