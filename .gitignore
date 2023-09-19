@@ -1,0 +1,7 @@
+/.idea
+/vendor
+
+.terraform
+terraform-provider-oryketo
+terraform.tfstate
+terraform.tfstate.*
