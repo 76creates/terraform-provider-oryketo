@@ -2,7 +2,7 @@ terraform {
   required_providers {
     oryketo = {
       source  = "76creates/oryketo"
-      version = "0.0.1"
+      version = "0.1.0"
     }
   }
 }
