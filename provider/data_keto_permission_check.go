@@ -66,12 +66,12 @@ func dataKetoPermissionCheckRead(ctx context.Context, d *schema.ResourceData, m 
 
 	rel, err := getClientRelationship(d)
 	if err != nil {
-		return diag.FromErr(fmt.Errorf("[0008] %s", err))
+		return diag.FromErr(err)
 	}
 
 	relJson, err := json.Marshal(rel)
 	if err != nil {
-		return diag.FromErr(fmt.Errorf("[0000] %s", err))
+		return diag.FromErr(err)
 	}
 
 	request := provider.readApiClient.PermissionApi.
@@ -90,14 +90,14 @@ func dataKetoPermissionCheckRead(ctx context.Context, d *schema.ResourceData, m 
 
 	result, resp, err := request.Execute()
 	if err != nil {
-		return diag.FromErr(fmt.Errorf("[0001] %s", err))
+		return diag.FromErr(err)
 	}
 	if resp.StatusCode != 200 {
-		return diag.FromErr(fmt.Errorf("[0002] %s", err))
+		return diag.FromErr(err)
 	}
 
 	if err := d.Set("allowed", result.GetAllowed()); err != nil {
-		return diag.FromErr(fmt.Errorf("[0023] %s", err))
+		return diag.FromErr(err)
 	}
 
 	d.SetId(fmt.Sprintf("%x", hash.UintString(string(relJson))))
