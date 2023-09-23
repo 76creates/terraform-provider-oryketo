@@ -1,10 +1,10 @@
-# ORY Keto Terraform Provider
+# Ory Keto Terraform Provider
 
 Terraform provider for [ORY Keto](https://github.com/ory/keto).
-It allows for managing ORY Keto relationship resources using Terraform.
+It allows for managing Ory Keto relationship resources using Terraform.
 
 ## Requirements
-- ORY Keto 0.11.0 server or newer, versions before haven't been tested.
+- Ory Keto 0.11.0 server or newer, prior versions were tested as part of this repository.
 
 ## Getting Started
 
